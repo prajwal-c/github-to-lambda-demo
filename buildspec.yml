@@ -39,5 +39,5 @@ phases:
       - aws s3 cp consumer/consumer_build.zip s3://aws-de-camp-praj/lambda-builds-zip/
       - echo "Updating Lambda functions (producer and consumer) via S3..."
       - aws lambda update-function-code --function-name airbnb_bkng_dta_gen --s3-bucket aws-de-camp-praj --s3-key lambda-builds-zip/producer_build.zip
-      - aws lambda update-function-code --function-name airbnb_bkng_dta_gen --s3-bucket aws-de-camp-praj --s3-key lambda-builds-zip/consumer_build.zip
+      - aws lambda update-function-code --function-name airbnb_lambda_to_s3 --s3-bucket aws-de-camp-praj --s3-key lambda-builds-zip/consumer_build.zip
       - echo "Deployment complete!!"
